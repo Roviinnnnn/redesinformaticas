@@ -1,0 +1,282 @@
+/* 1. Variables CSS (Paleta de Colores) */
+:root {
+    --fondo-sitio: #0D0D0D;
+    --detalles: #0C0F22;
+    --texto: rgba(255, 255, 255, 0.879);
+}
+
+/* 2. Tipo de letra/fuente */
+body {
+    background-color: var(--fondo-sitio);
+    color: var(--texto);
+    margin: 0;
+    font-family: "Anton SC", sans-serif;
+}
+
+/* Estilos para Bebas Neue (títulos) */
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Estilos para Anton SC (párrafos y texto general) */
+.anton-sc-regular {
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* BARRA DE NAVEGACIÓN */
+.navbar {
+    background-color: black; /* Color inicial */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Alínea el contenido a la derecha */
+    flex-grow: 1; /* Esto hace que ocupe el máximo espacio disponible o para que el centrado funcione*/
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-item a {
+    color: white; /* Color del texto */
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.logo img {
+    height: 30px;
+    margin-right: auto; /* Coloca la imagen a la izquierda */
+}
+
+/* Fondo acrílico al hacer scroll */
+body.scrolled .navbar {
+    background-color: rgba(24, 24, 25, 0.8); /* Fondo de acrílico */
+}
+
+/* Estilo para el icono de Home */
+.home-icon {
+    height: 30px;
+    width: auto;
+}
+
+/* Transición para el acrílico al hacer scroll */
+.navbar.scrolled {
+    background-color: rgba(12, 15, 34, 0.8); /* Fondo con efecto acrílico */
+}
+
+/* Transición suave para el cambio de fondo */
+.navbar {
+    transition: background-color 0.3s ease;
+}
+
+/* CONTENIDO*/
+/* Animación de desvanecimiento */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Primera sección */
+.hero-section {
+    background-image: url('https://res.cloudinary.com/dnepy00lb/image/upload/v1724025408/Degradado_Index_jtd8jx.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Altura de la sección */
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+.content-wrapper {
+    color: white;
+    max-width: 50%;
+}
+
+.hero-section h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.hero-section h5 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* Segunda sección */
+.three-columns-section {
+    background-color: #0D0D0D;
+    color: #7C7C7C;
+    padding: 50px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .column {
+    flex: 1;
+    max-width: 30%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  .rounded-box {
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px; /* Aumento del margen inferior */
+  }
+  
+  .rounded-box img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .text-overlay {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    transform: translate(-18%, -25%);
+    color: #ffffff;
+    text-align: justify;
+    padding: 15px;
+    box-sizing: border-box;
+    max-width: 100%; /* Limitar el ancho máximo del texto */
+  }
+  
+  h6 {
+    font-family: 'Anton SC', sans-serif;
+    margin: 0;
+    padding: 10px;
+    color: #7C7C7C;
+  }
+
+/* Sección Vínculo Index */
+.vinculo-section {
+    background: url('https://res.cloudinary.com/dnepy00lb/image/upload/v1724066682/DegradadoRedesVinculoIndex_tlguoz.png') no-repeat center center;
+    background-size: cover;
+    padding: 60px 0;
+}
+
+.vinculo-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.vinculo-content .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.vinculo-content .column {
+    flex: 1;
+    margin: 0 20px;
+    text-align: center;
+}
+
+.vinculo-content .column h2 {
+    color: #000;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.vinculo-content .column img {
+    max-width: 100%;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.vinculo-content .column img:hover {
+    transform: scale(1.05);
+}
+
+
+/* FOOTER */
+.footer {
+    background-image: url('https://res.cloudinary.com/dnepy00lb/image/upload/v1724054253/Degradado_Footer_kxirpl.png');
+    background-size: cover;
+    background-position: center;
+    color: rgba(255, 255, 255, 0.879);
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Para que sea responsive */
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px; /* Asegura que las columnas tengan un tamaño mínimo */
+}
+
+.footer-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    color: white;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Anton SC', sans-serif;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-icon {
+    width: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.footer-social p {
+    margin-top: 10px;
+    font-family: 'Anton SC', sans-serif;
+}
